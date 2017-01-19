@@ -17,10 +17,10 @@ class ReviewList extends Component {
   render() {
     return (
       <ul>
-        {this.extractedTweets ? 
-          this.extractedTweets.map(review => 
+        {this.props.extractedTweets ? 
+          this.props.extractedTweets.map(review => 
             <Review
-              key={review.id}
+              key={Math.random()}
               {...review}
             />
           ) :
@@ -31,12 +31,5 @@ class ReviewList extends Component {
   }
 
 } 
-
-// ReviewList.propTypes = {
-//   reviews: PropTypes.arrayOf(PropTypes.shape({
-//     id: PropTypes.number.isRequired,
-//     body: PropTypes.string.isRequired,
-//   }).isRequired).isRequired
-// };
 
 export default ReviewList;

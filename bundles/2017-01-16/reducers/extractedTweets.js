@@ -2,8 +2,19 @@ const extractTweets = () => {
   const tweetArr = [];
 
   document.querySelectorAll('iframe').forEach(elem => {
-   elem.contentWindow.document.body.querySelectorAll('.timeline-Tweet-text').forEach(tweet => {
-     tweetArr.push(tweet.innerHTML);
+    
+   elem.contentWindow.document.body.querySelectorAll('.timeline-Tweet').forEach(tweet => {
+
+     const text = tweet.querySelector('.timeline-Tweet-text').innerHTML;
+     const author = tweet.querySelector('.TweetAuthor-name').getAttribute('title');
+     const time = tweet.querySelector('time').innerText.match(/.*/)[0]
+     tweetArr.push(
+       {
+         text,
+         author,
+         time
+       }
+     );
    });
     console.log(elem)
   });
