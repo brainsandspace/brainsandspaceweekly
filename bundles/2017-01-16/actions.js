@@ -4,6 +4,7 @@
 export const ADD_TODO = 'ADD_TODO';
 export const TOGGLE_TODO = 'TOGGLE_TODO';
 export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER';
+export const EXTRACT_TWEETS = 'EXTRACT_TWEETS';
 
 /**
  * other constants
@@ -28,4 +29,8 @@ export function toggleTodo(id) {
 
 export function setVisibilityFilter(filter) {
   return { type: SET_VISIBILITY_FILTER, filter };
+}
+
+export function extractTweets() {
+  return { type: EXTRACT_TWEETS };
 }
