@@ -1,14 +1,13 @@
 // const webpack = require('webpack');
 const path = require('path');
-console.log('in webpack config', path.resolve(__dirname,'..'));
 
 module.exports = {
 
-  entry: './2017-01-16/index.js',
+  entry: __dirname,
 
   output: {
-    filename: '2017-01-16.bundle.js',
-    path: path.resolve(__dirname, '..'),
+    filename: 'cabinets.bundle.js',
+    path: path.resolve(__dirname, '../../dist')
   },
 
   module: {
@@ -28,9 +27,9 @@ module.exports = {
   },
 
   
-  devServer: {
-    contentBase: path.resolve(__dirname, '..')
-  },
+  // devServer: {
+  //   // contentBase: path.resolve(__dirname, '../dist')
+  // },
 
   devtool: 'cheap-module-eval-source-map'
 }

@@ -1,24 +1,30 @@
 # brains and space weekly
-weekly publication
+"weakly" publication
+  - publishing as fast as we can, but the goal is always 1 week
+
+## System Architecture
+*for brainsand.space aka brainsandspace.com*
+- Uses github pages & jekyll to serve this repository to custom domain.
+- There is also a **Linode server** at IP address 69.164.222.13 that is used for hydrating the posts with external data. It is running sinatra on Unicorn with nginx acting as a reverse proxy.
+
 
 ## Developing a post
-- Change some of the paths in package.json to match your date.
-- Make a new folder for the 'app'.
-```
-cd bundles
-mkdir [date]
-```
-- Add and edit a config file (if needed) in `./configs/`
-- To test without having to use local server (which wasn't autogenerating for me on Windows), run `npm start` which will set up a `webpack-dev-server` that serves the dummy `index.html` from the bundles directory. Make sure you are using  the right src script in there.
+- Make a new folder in `/_src` and name this folder the title of the 'post'.
+- In this new folder, make a `webpack.config.js` file in the fashion of the one in `/_cabinets`.
+- In `/_src/index.html`, change the script src accordingly.
+- 
+- To test without having to use local server (which wasn't autogenerating for me on Windows), `cd` into `/_src` and run `npm start` which will set up a `webpack-dev-server` that serves the dummy `index.html` from the bundles directory. Make sure you are using  the right src script in there.
 
-## To serve locally (and in production)
-- From `bundles`, run `npm run start`, which will build a webpack bundle javascript file. This is the file you want to reference from your post.
+## To serve Jekyll locally (and in production)
+- From `/_src`, run `npm run build`, which will build a webpack bundle javascript file in `/dist`. This is the file you want to reference from your post.
 - `cd` to root directory and then `bundle exec jekyll serve`
 
 ## file structure
-New 'posts' are in `/_posts`, and they reference js bundles built by webpack and emitted to `/bundles`.
+New 'posts' are in `/_posts`, and they reference js bundles built by webpack and emitted to `/dist`.
     
 # Todo
-- [ ] better workflow
+- [x] better workflow
+  - but is this ever really done?
+- [ ] arhitecture diagram
 - [ ] reuse components
   - includes most likely setting up codesplitting

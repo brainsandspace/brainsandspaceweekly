@@ -2,10 +2,10 @@
   "name": "bundles",
   "version": "1.0.0",
   "description": "",
-  "main": "2017/01/11/index.js",
+  "main": "./cabinets/index.js",
   "scripts": {
-    "start": "webpack-dev-server --config ./configs/2017-01-16.webpack.config.js --progress --inline --hot",
-    "build": "webpack --config ./configs/2017-01-16.webpack.config.js -p",
+    "start": "webpack-dev-server --config ./cabinets/webpack.config.js --progress --inline --hot",
+    "build": "webpack --config ./cabinets/webpack.config.js -p",
     "lint": "eslint ./",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
