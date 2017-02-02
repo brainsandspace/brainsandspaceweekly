@@ -2,7 +2,6 @@ import React, { PropTypes } from 'react';
 
 const Header = () => (
   <div className="header">
-    
     <div className="top"></div>
     
     <ul className="bottom">

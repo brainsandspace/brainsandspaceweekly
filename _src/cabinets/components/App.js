@@ -14,7 +14,6 @@ const App = () => (
     <VisibleTodoList />
     {/*<Reviews />*/}
     <Footer />
-
   </div>
 );
 

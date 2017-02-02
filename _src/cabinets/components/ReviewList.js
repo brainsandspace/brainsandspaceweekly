@@ -9,7 +9,7 @@ class ReviewList extends Component {
   }
 
   componentDidMount() {
-    console.log('component did mount')
+    console.log('component diasdfd mount')
     this.props.onTimeout();
     setTimeout(this.props.onTimeout, 2000);
   }
@@ -29,7 +29,6 @@ class ReviewList extends Component {
       </ul>
     );
   }
-
 } 
 
 export default ReviewList;
