@@ -1,5 +1,5 @@
 /**
- * index.js
+ * app.js
  * 
  * Entry file for application. App setup.
  */
@@ -30,12 +30,37 @@ import './global-styles'
 // import routes
 import createRoutes from './routes';
 
-
 // Create redux history with singleton browserHistory provided by react-router
 const initialState = {};
 const store = configureStore(initialState, browserHistory);
 
 // sync history with store
-// const history = syncHistoryWithStore(browserHistory, store, {
-//   selectLocationStore: makeSelectLocationState(),
-// });
+const history = syncHistoryWithStore(browserHistory, store, {
+  selectLocationState: makeSelectLocationState(),
+});
+
+// set up the router, wrapping all routes in the App component
+const rootRoute = {
+  component: App,
+  childRoutes: createRoutes(store)
+}
+console.log('rootRoute', rootRoute);
+
+
+const render = messages => {
+  ReactDOM.render(
+  <Provider store={store}>
+    <Router
+      history={history}
+      routes={rootRoute}
+      render={
+        // scroll to top when going to a new page
+        applyRouterMiddleware(useScroll())
+      }
+    />
+  </Provider>,
+  document.getElementById('root')
+  );
+};
+
+render()

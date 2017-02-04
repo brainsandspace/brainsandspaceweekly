@@ -1,8 +1,11 @@
+/**
+ * The global state selectors
+ */
 // TODO there is more to implement in here
 
 const makeSelectLocationState = () => {
   let prevRoutingState;
-  let preRoutingStateJS;
+  let prevRoutingStateJS;
 
   return (state) => {
     const routingState = state.get('route');

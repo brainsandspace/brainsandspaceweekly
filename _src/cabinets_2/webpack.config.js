@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
 
-  entry: __dirname,
+  entry: `${__dirname}/app.js`,
 
   output: {
     filename: 'cabinets.bundle.js',
