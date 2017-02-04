@@ -4,10 +4,11 @@
   "description": "",
   "main": "./cabinets/index.js",
   "scripts": {
-    "start": "webpack-dev-server --config ./cabinets/webpack.config.js --progress --hot --port 3000 --host 0.0.0.0",
-    "build": "webpack --config ./cabinets/webpack.config.js -p",
+    "start": "webpack-dev-server --progress --hot --port 3000 --host 0.0.0.0",
+    "build": "webpack -p",
     "lint": "eslint ./",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --coverage",
+    "watch:test": "jest --coverage --watch"
   },
   "author": "",
   "license": "ISC",
