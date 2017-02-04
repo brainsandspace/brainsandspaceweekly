@@ -24,8 +24,8 @@
 New 'posts' are in `/_posts`, and they reference js bundles built by webpack and emitted to `/dist`.
     
 # Todo
-- [x] better workflow
-  - but is this ever really done?
+- [ ] better workflow
+  - but can this ever really be completed?
 - [ ] arhitecture diagram
 - [ ] reuse components
   - includes most likely setting up codesplitting
@@ -33,3 +33,6 @@ New 'posts' are in `/_posts`, and they reference js bundles built by webpack and
 - [ ] use docker for dev environment
 - [ ] test more rigorously
 - [ ] create and use a yeoman generator for generating new post file structure
+- [ ] better organization of webpack config files (production/dev)
+- [ ] use dll's like react-boilerplate
+  - not really even sure what they do right now, but I want them.
