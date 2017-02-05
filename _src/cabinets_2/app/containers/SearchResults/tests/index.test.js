@@ -1,17 +1,15 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
 import { shallow } from 'enzyme';
 
-import HomePage from '../index';
-import messages from '../messages';
+import SearchResults from '../index';
 
-describe('<HomePage />', () => {
+describe('<SearchResults />', () => {
   it('should render the page message', () => {
     const renderedComponent = shallow(
-      <HomePage />
+      <SearchResults />
     );
     expect(renderedComponent.contains(
-      <FormattedMessage {...messages.header} />
+      // <FormattedMessage {...messages.header} />
     )).toEqual(true);
   });
 });

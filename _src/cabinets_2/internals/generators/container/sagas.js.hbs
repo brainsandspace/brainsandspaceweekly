@@ -2,7 +2,7 @@
 
 // Individual exports for testing
 export function* defaultSaga() {
-  // See example in containers/HomePage/sagas.js
+  // See example in containers/SearchResults/sagas.js
 }
 
 // All sagas to be loaded

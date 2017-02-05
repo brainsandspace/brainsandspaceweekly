@@ -12,6 +12,11 @@
  */
 
 import React from 'react';
+import Helmet from 'react-helmet';
+
+import Footer from 'components/Footer';
+import Header from 'components/Header';
+
 
 export default class App extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
 
@@ -22,7 +27,13 @@ export default class App extends React.PureComponent { // eslint-disable-line re
   render() {
     return (
       <div>
+        <Helmet 
+          titleTemplate="Amazon.com: %s"
+          defaultTitle="Amazon.com"
+        />
+        <Header />
         {React.Children.toArray(this.props.children)}
+        <Footer />
       </div>
     );
   }
