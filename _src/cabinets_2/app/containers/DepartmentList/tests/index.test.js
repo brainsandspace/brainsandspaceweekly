@@ -1,7 +1,7 @@
 // import React from 'react';
 // import { shallow } from 'enzyme';
 
-// import DepartmentList from '../index';
+// import { DepartmentList } from '../index';
 
 describe('<DepartmentList />', () => {
   it('Expect to have unit tests specified', () => {
