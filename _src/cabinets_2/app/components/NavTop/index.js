@@ -7,8 +7,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import DepartmentsDropdown from 'components/DepartmentsDropdown';
 import NavTools from 'components/NavTools';
+import DepartmentList from 'containers/DepartmentList';
 
 const Wrapper = styled.nav`
 background: #232F3E;
@@ -21,7 +21,7 @@ class NavTop extends React.Component { // eslint-disable-line react/prefer-state
   render() {
     return (
       <Wrapper>
-        <DepartmentsDropdown />
+        <DepartmentList />
         <NavTools />
       </Wrapper>
     );

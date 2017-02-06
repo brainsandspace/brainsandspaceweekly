@@ -5,19 +5,41 @@
  */
 
 import { fromJS } from 'immutable';
+import { combineReducers } from 'redux-immutable';
+
 import {
-  DEFAULT_ACTION,
+  SHOW_DEPARTMENT_LIST,
+  DEPARTMENTS,
 } from './constants';
 
-const initialState = fromJS({});
+const initialState = {
+  departmentListVisible: false,
+  departmentsArr: DEPARTMENTS,
+};
+console.log('initialState', initialState);
 
-function departmentListReducer(state = initialState, action) {
+function departmentListVisibleReducer(state = initialState.departmentListVisible, action) {
   switch (action.type) {
-    case DEFAULT_ACTION:
-      return state;
+    case SHOW_DEPARTMENT_LIST:
+      return true;
     default:
       return state;
   }
 }
 
+function departmentsArrReducer(state = initialState.departmentsArr, action) {
+  console.log('action astate', action, state);
+  switch (action.type) {
+    case SHOW_DEPARTMENT_LIST:
+      return state;
+    default:
+      console.log('returned state', state)
+      return state;
+  }
+}
+
+const departmentListReducer = combineReducers({
+  departmentListVisible: departmentListVisibleReducer,
+  departmentsArr: departmentsArrReducer,
+});
 export default departmentListReducer;

@@ -8,6 +8,7 @@ import { fromJS } from 'immutable';
 import { LOCATION_CHANGE } from 'react-router-redux';
 
 import languageProviderReducer from 'containers/LanguageProvider/reducer';
+import departmentListReducer from 'containers/DepartmentList/reducer';
 
 /*
  * routeReducer
@@ -44,6 +45,8 @@ export default function createReducer(asyncReducers) {
   return combineReducers({
     route: routeReducer,
     language: languageProviderReducer,
+    // might not be doing this right with departments.
+    departments: departmentListReducer,
     ...asyncReducers,
   });
 }

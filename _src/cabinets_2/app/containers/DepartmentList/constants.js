@@ -4,7 +4,7 @@
  *
  */
 
-export const DEFAULT_ACTION = 'app/DepartmentList/DEFAULT_ACTION';
+export const SHOW_DEPARTMENT_LIST = 'app/DepartmentList/HOVER_DEPARTMENT';
 
 export const DEPARTMENTS = [
   { name: 'Vice' },

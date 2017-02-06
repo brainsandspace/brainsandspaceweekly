@@ -3,7 +3,7 @@ import { createSelector } from 'reselect';
 /**
  * Direct selector to the departmentList state domain
  */
-const selectDepartmentListDomain = () => (state) => state.get('departmentList');
+const selectDepartmentListDomain = (state) => state.get('departments');
 
 /**
  * Other specific selectors
@@ -15,11 +15,12 @@ const selectDepartmentListDomain = () => (state) => state.get('departmentList');
  */
 
 const makeSelectDepartmentList = () => createSelector(
-  selectDepartmentListDomain(),
-  (substate) => substate.toJS()
+  selectDepartmentListDomain,
+  // (substate) => substate.toJS()
 );
+console.log('makeselectdepartmentList', makeSelectDepartmentList());
 
-export default makeSelectDepartmentList;
 export {
   selectDepartmentListDomain,
+  makeSelectDepartmentList,
 };

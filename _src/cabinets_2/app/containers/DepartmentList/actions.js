@@ -5,11 +5,11 @@
  */
 
 import {
-  DEFAULT_ACTION,
+  SHOW_DEPARTMENT_LIST,
 } from './constants';
 
-export function defaultAction() {
+export function showDepartmentList() {
   return {
-    type: DEFAULT_ACTION,
+    type: SHOW_DEPARTMENT_LIST,
   };
 }

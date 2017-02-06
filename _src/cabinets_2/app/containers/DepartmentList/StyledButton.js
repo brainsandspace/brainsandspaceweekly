@@ -4,20 +4,17 @@
 *
 */
 
-import React from 'react';
+import React, { PropTypes } from 'react';
 import styled from 'styled-components';
 
-import DepartmentList from 'components/DepartmentList';
-
 const Wrapper = styled.div`
-#button {
-  margin: 5px;
-  padding: 0 10px;
-  border: 1px solid #4440;
-  cursor: pointer;
-}
 
-#button:hover {
+margin: 5px;
+padding: 0 10px;
+border: 1px solid #4440;
+cursor: pointer;
+
+&:hover {
   border: 1px solid #444;
 }
 
@@ -37,7 +34,6 @@ h2 {
   background-repeat: repeat-x;
   display: inline-block;
   border-style: solid;
-  _border-style: dashed;
   border-width: 4px;
   border-color: transparent;
   border-top: 4px solid #606060;
@@ -51,19 +47,16 @@ h2 {
 }
 `;
 
-function DepartmentsDropdown() {
+function DepartmentsDropdown({ onClick }) {
   return (
-    <Wrapper>
-      <div id="button">
-        <h2>Departments</h2><div id="nav-arrow"></div>
-        <DepartmentList />
-      </div>
+    <Wrapper onClick={onClick}>
+      <h2>Departments</h2><div id="nav-arrow"></div>
     </Wrapper>
   );
 }
 
 DepartmentsDropdown.propTypes = {
-
+  onClick: PropTypes.func.isRequired,
 };
 
 export default DepartmentsDropdown;
