@@ -8,20 +8,21 @@ import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
 import { createStructuredSelector } from 'reselect';
-import Listing from 'containers/Listing';
+
+import SearchResults from 'containers/SearchResults';
 import makeSelectBody from './selectors';
 
 export class Body extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-      <div>
+      <div style={this.props.dark ? {background: 'grey'} : {background: 'white'}}>
         <Helmet
           title="Body"
           meta={[
             { name: 'description', content: 'Description of Body' },
           ]}
         />
-        <Listing />
+        <SearchResults />
       </div>
     );
   }
@@ -32,7 +33,7 @@ Body.propTypes = {
 };
 
 const mapStateToProps = createStructuredSelector({
-  Body: makeSelectBody(),
+  dark: makeSelectBody(),
 });
 
 function mapDispatchToProps(dispatch) {

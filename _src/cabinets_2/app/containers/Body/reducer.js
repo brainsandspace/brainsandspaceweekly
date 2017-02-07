@@ -5,16 +5,23 @@
  */
 
 import { fromJS } from 'immutable';
+
+import {
+  SHOW_DEPARTMENT_LIST,
+} from 'containers/DepartmentList/constants';
+
 import {
   DEFAULT_ACTION,
 } from './constants';
 
-const initialState = fromJS({});
+const initialState = fromJS({
+  dark: false,
+});
 
 function bodyReducer(state = initialState, action) {
   switch (action.type) {
-    case DEFAULT_ACTION:
-      return state;
+    case SHOW_DEPARTMENT_LIST:
+      return fromJS({ dark: true });
     default:
       return state;
   }

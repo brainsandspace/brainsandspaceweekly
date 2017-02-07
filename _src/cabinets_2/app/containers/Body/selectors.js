@@ -16,7 +16,7 @@ const selectBodyDomain = () => (state) => state.get('body');
 
 const makeSelectBody = () => createSelector(
   selectBodyDomain(),
-  // (substate) => substate.toJS()
+  (bodyState) => bodyState.get('dark')
 );
 
 export default makeSelectBody;

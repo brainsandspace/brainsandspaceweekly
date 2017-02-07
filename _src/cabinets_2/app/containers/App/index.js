@@ -33,6 +33,7 @@ export default class App extends React.PureComponent { // eslint-disable-line re
         />
         <Header />
         <Body />
+        {/* Not exactly sure how to handle routing */}
         {React.Children.toArray(this.props.children)}
         <Footer />
       </div>

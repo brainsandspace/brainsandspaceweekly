@@ -9,6 +9,7 @@ import { LOCATION_CHANGE } from 'react-router-redux';
 
 import languageProviderReducer from 'containers/LanguageProvider/reducer';
 import departmentListReducer from 'containers/DepartmentList/reducer';
+import bodyReducer from 'containers/Body/reducer';
 
 /*
  * routeReducer
@@ -47,6 +48,7 @@ export default function createReducer(asyncReducers) {
     language: languageProviderReducer,
     // might not be doing this right with departments.
     departments: departmentListReducer,
+    body: bodyReducer,
     ...asyncReducers,
   });
 }
