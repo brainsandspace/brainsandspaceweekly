@@ -15,6 +15,8 @@ const Wrapper = styled.footer`
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 50;
+  position: relative;
 `;
 
 class Footer extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function

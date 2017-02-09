@@ -11,7 +11,7 @@ export default class SearchResults extends React.Component { // eslint-disable-l
   render() {
     return (
       <h1>
-        Test
+        Wooot
       </h1>
     );
   }

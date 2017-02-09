@@ -15,6 +15,8 @@ display: flex;
 flex-direction: column;
 width:100%;
 overflow: hidden;
+z-index: 60;
+position: relative;
 `;
 
 class Header extends React.Component { // eslint-disable-line react/prefer-stateless-function

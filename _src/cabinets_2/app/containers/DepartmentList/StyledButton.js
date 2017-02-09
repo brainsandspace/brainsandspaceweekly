@@ -49,7 +49,7 @@ h2 {
 
 function DepartmentsDropdown({ onClick }) {
   return (
-    <Wrapper onClick={onClick}>
+    <Wrapper onClick={onClick} onMouseEnter={onClick} >
       <h2>Departments</h2><div id="nav-arrow"></div>
     </Wrapper>
   );

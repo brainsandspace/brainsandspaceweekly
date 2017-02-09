@@ -6,9 +6,9 @@ injectGlobal`
   body {
     height: 100%;
     width: 100%;
-  }
+}
 
-  body {
+  html,body {
     font-family: Arial, sans-serif;
     font-size: 13px;
   }
@@ -23,7 +23,7 @@ injectGlobal`
   }
 
   #app {
-    background-color: #fafafa;
+    // background-color: #fafafa;
     min-height: 100%;
     min-width: 100%;
   }
@@ -31,4 +31,13 @@ injectGlobal`
   p {
     margin: 0;
   }
-`;
+
+.orange-hover:hover {
+  color: #e47911;
+}
+
+.bold-hover:hover {
+  font-weight: bold;
+}
+`
+;

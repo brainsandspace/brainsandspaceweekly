@@ -7,6 +7,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+
 const Wrapper = styled.nav`
 ul {
   width: 100%; height: 33px;
@@ -30,7 +31,6 @@ ul {
   }
 
   li:hover {
-    color: #e47911;
     border-bottom: 2px solid #f90;
   }
 }
@@ -40,20 +40,20 @@ function NavCategory() {
   return (
     <Wrapper>
       <ul>
-        <li className="selected"><p>Home & Kitchen</p></li>
-        <li><p>Best Sellers</p></li>
-        <li><p>Shop by Room</p></li>
-        <li><p>Bedding & Bath</p></li>
-        <li><p>Home Décor</p></li>
-        <li><p>Artwork</p></li>
-        <li><p>Storage</p></li>
-        <li><p>Vacuums & Floor Care</p></li>
-        <li><p>Heating & Cooling</p></li>
-        <li><p>Furniture</p></li>
-        <li><p>Kitchen & Dining</p></li>
-        <li><p>Patio & Garden</p></li>
-        <li><p>Appliances</p></li>
-        <li><p>Wedding Registry</p></li>
+        <li className="orange-hover selected"><p>Home & Kitchen</p></li>
+        <li className="orange-hover"><p>Best Sellers</p></li>
+        <li className="orange-hover"><p>Shop by Room</p></li>
+        <li className="orange-hover"><p>Bedding & Bath</p></li>
+        <li className="orange-hover"><p>Home Décor</p></li>
+        <li className="orange-hover"><p>Artwork</p></li>
+        <li className="orange-hover"><p>Storage</p></li>
+        <li className="orange-hover"><p>Vacuums & Floor Care</p></li>
+        <li className="orange-hover"><p>Heating & Cooling</p></li>
+        <li className="orange-hover"><p>Furniture</p></li>
+        <li className="orange-hover"><p>Kitchen & Dining</p></li>
+        <li className="orange-hover"><p>Patio & Garden</p></li>
+        <li className="orange-hover"><p>Appliances</p></li>
+        <li className="orange-hover"><p>Wedding Registry</p></li>
       </ul>
     </Wrapper>
   );

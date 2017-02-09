@@ -9,6 +9,7 @@ import { combineReducers } from 'redux-immutable';
 
 import {
   SHOW_DEPARTMENT_LIST,
+  HIDE_DEPARTMENT_LIST,
   DEPARTMENTS,
 } from './constants';
 
@@ -20,8 +21,13 @@ console.log('initialState', initialState);
 
 function departmentListVisibleReducer(state = initialState.departmentListVisible, action) {
   switch (action.type) {
+
     case SHOW_DEPARTMENT_LIST:
       return true;
+
+    case HIDE_DEPARTMENT_LIST:
+      return false;
+
     default:
       return state;
   }

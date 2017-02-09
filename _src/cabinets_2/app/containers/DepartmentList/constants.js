@@ -4,7 +4,8 @@
  *
  */
 
-export const SHOW_DEPARTMENT_LIST = 'app/DepartmentList/HOVER_DEPARTMENT';
+export const SHOW_DEPARTMENT_LIST = 'app/DepartmentList/SHOW_DEPARTMENT_LIST';
+export const HIDE_DEPARTMENT_LIST = 'app/DepartmentList/HIDE_DEPARTMENT_LIST';
 
 export const DEPARTMENTS = [
   { name: 'Vice' },
