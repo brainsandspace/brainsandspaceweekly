@@ -8,6 +8,8 @@ background: white;
 min-width: 230px;
 padding: 10px;
 margin: 0;
+margin-top: -4px;
+border-radius: 2px;
 
 &:before {
   content:'';

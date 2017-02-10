@@ -26,7 +26,6 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
         <div className="header">
           <NavTop />
           <div className="top"></div>
-          <NavCategory />
         </div>
       </Wrapper>
     );

@@ -11,6 +11,10 @@ import Helmet from 'react-helmet';
 import { createStructuredSelector } from 'reselect';
 
 import SearchResults from 'containers/SearchResults';
+import DarkOverlay from 'components/DarkOverlay';
+import NavCategory from 'components/NavCategory';
+import ReviewList from 'components/ReviewList';
+
 import makeSelectBody from './selectors';
 
 const Wrapper = styled.div`
@@ -29,9 +33,11 @@ export class Body extends React.Component { // eslint-disable-line react/prefer-
           ]}
         />
         {this.props.dark ?
-          <div style={{ width: '100%', height: '100%', background: '#3333', zIndex: 0 }}>asdfasdf</div> :
+          <DarkOverlay /> :
           null
         }
+        <NavCategory />
+        <ReviewList />
         <SearchResults />
       </Wrapper>
     );

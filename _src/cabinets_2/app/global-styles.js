@@ -39,5 +39,15 @@ injectGlobal`
 .bold-hover:hover {
   font-weight: bold;
 }
+
+a {
+  text-decoration: none;
+  color: #0066c0;
+}
+
+a:hover {
+  color: #c45500;
+  text-decoration: underline;
+}
 `
 ;
