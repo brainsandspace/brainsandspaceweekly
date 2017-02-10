@@ -1,11 +1,12 @@
 
 /**
 *
-* ReviewList
+* ReviewList -- this is now a container so it can be loaded later only when user has scrolled down some or something
 *
 */
 
 import React from 'react';
+import { connect } from 'react-redux';
 import stringHash from 'string-hash';
 import styled from 'styled-components';
 
@@ -50,9 +51,16 @@ class ReviewList extends React.PureComponent { // eslint-disable-line react/pref
     );
   }
 }
-
 ReviewList.propTypes = {
-
 };
 
-export default ReviewList;
+const mapStateToProps = (state) => {
+  return {};
+};
+
+function mapDispatchToProps(dispatch) {
+  return {
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ReviewList);

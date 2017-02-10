@@ -36,7 +36,6 @@ export class DepartmentList extends React.Component { // eslint-disable-line rea
 }
 
 DepartmentList.propTypes = {
-  // dispatch: PropTypes.func.isRequired,
   departmentsArr: PropTypes.array.isRequired,
   departmentListVisible: PropTypes.bool.isRequired,
   onClick: PropTypes.func.isRequired,
@@ -59,7 +58,6 @@ const mapStateToProps = (state) => {
 
 function mapDispatchToProps(dispatch) {
   return {
-    dispatch,
     onClick: () => dispatch(showDepartmentList()),
     onMouseLeave: () => dispatch(hideDepartmentList()),
   };

@@ -4,6 +4,7 @@ import { createSelector } from 'reselect';
  * Direct selector to the body state domain
  */
 const selectBodyDomain = () => (state) => state.get('body');
+// const selectBodyDomain = () => (state) => state.get('body');
 
 /**
  * Other specific selectors
@@ -14,12 +15,17 @@ const selectBodyDomain = () => (state) => state.get('body');
  * Default selector used by Body
  */
 
-const makeSelectBody = () => createSelector(
+export const makeSelectBodyDark = () => createSelector(
   selectBodyDomain(),
-  (bodyState) => bodyState.get('dark')
+  (bodyState) => bodyState.dark
 );
 
-export default makeSelectBody;
-export {
-  selectBodyDomain,
-};
+export const makeSelectBodySelectedListing = () => createSelector(
+  selectBodyDomain(),
+  (bodyState) => bodyState.selectedListing
+);
+
+// export default makeSelectBody;
+// export {
+//   selectBodyDomain,
+// };

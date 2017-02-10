@@ -7,7 +7,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import NavCategory from 'components/NavCategory';
 import NavTop from 'components/NavTop';
 
 const Wrapper = styled.header`
