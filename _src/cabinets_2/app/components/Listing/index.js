@@ -9,6 +9,8 @@ import styled from 'styled-components';
 
 import ReviewList from 'containers/ReviewList';
 import HeroSection from 'components/HeroSection';
+import ProductDescription from 'components/ProductDescription';
+import ProductDetails from 'components/ProductDetails';
 
 const Wrapper = styled.div`
 display:flex;
@@ -43,6 +45,8 @@ class Listing extends React.Component { // eslint-disable-line react/prefer-stat
       <Wrapper>
         <p className="back-button"><span className="back-arrow">‹&nbsp;</span><a href="#" className="back">Back to search results for "cabinet"</a></p>
         <HeroSection {...this.props} />
+        <ProductDescription text={this.props.data.product_description} />
+        <ProductDetails deets={this.props.data.product_details} />
         <ReviewList />
       </Wrapper>
     );

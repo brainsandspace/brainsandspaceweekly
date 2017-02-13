@@ -15,11 +15,27 @@ padding: 10px;
 div#pricing {
   display: flex;
   flex-direction: row;
+  color: #555;
 
   ul#pricing-labels {
     text-align:right;
     margin-right: 0.5em;
+    min-width: 60px;
   }
+}
+
+li.list-price {
+  text-decoration: line-through;
+}
+
+li.final-price {
+  color: #b12704;
+  font-size: 18px;
+  line-height: 19px;
+}
+
+li.savings {
+  color: #b12704
 }
 
 h1 { 
@@ -37,11 +53,25 @@ ul {
   list-style: none;
 }
 
+.feature-list {
+  list-style-type: disc;
+  color: #949494;
+  padding-left: 20px;
+  
+  span {
+    color: #111;
+  }
+}
+
 .brand {
   color: #0066c0
 }
-`;
 
+.availability {
+  color: #008a00;
+  font-size: 17px;
+}
+`;
 
 class CenterColumn extends React.Component {
   render() {
@@ -52,17 +82,28 @@ class CenterColumn extends React.Component {
         <StarDropdown />
         <hr />
         <div id="pricing">
+
           <ul id="pricing-labels">
             <li>List Price:</li>
             <li>Price:</li>
             <li>You Lose:</li>
           </ul>
+          
           <ul id="pricing-values">
-            <li>List Price {this.props.data.price}</li>
-            <li>Price: Freedom or something</li>
-            <li>You Lose: respect of other nations or something</li>
+            <li className="list-price">{this.props.data.price}</li>
+            <li className="final-price">Freedom</li>
+            <li className="savings">Respect of Western Europe</li>
           </ul>
         </div>
+
+        <div className="availability">{this.props.data.availability}</div>
+
+        <ul className="feature-list">
+          {this.props.data.feature_bullets.map((bullet) => (
+            <li><span>{bullet}</span></li>
+          ))}
+        </ul>
+
       </Wrapper>
     );
   }
