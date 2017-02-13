@@ -7,6 +7,8 @@
 import React, { PropTypes } from 'react';
 import styled from 'styled-components';
 
+import StarDropdown from 'components/StarDropdown';
+
 const Wrapper = styled.div`
 padding: 10px;
 
@@ -20,6 +22,12 @@ div#pricing {
   }
 }
 
+h1 { 
+  margin: 0;
+  font-size: 21px;
+  font-weight: normal;
+}
+
 hr {
   border-top: #e7e7e7;
 }
@@ -28,6 +36,10 @@ ul {
   padding: 0;
   list-style: none;
 }
+
+.brand {
+  color: #0066c0
+}
 `;
 
 
@@ -35,7 +47,9 @@ class CenterColumn extends React.Component {
   render() {
     return (
       <Wrapper>
+        <p className="brand">{this.props.data.brand}</p>
         <h1>{this.props.member}</h1>
+        <StarDropdown />
         <hr />
         <div id="pricing">
           <ul id="pricing-labels">

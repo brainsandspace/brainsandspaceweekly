@@ -18,15 +18,7 @@ margin-bottom: 20px;
 }
 
 .stars {
-    background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/AUIClients/AmazonUIBaseCSS-sprite_1x-28bd59af93d9b1c745bb0aca4de58763b54df7cf._V2_.png);
-    -webkit-background-size: 400px 670px;
-    background-size: 400px 670px;
-    width: 80px;
-    height: 18px;
-    background-repeat: no-repeat;
     background-position: -69px -368px;
-    display: inline-block;
-    vertical-align: text-top;
     margin-right: 5px;
 }
 `;

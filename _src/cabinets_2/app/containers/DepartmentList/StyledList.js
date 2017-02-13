@@ -25,9 +25,7 @@ border-radius: 2px;
   position: absolute;
   top: 1px;
   left: 45%;
-  
-  margin-top:-10px;
-  
+  margin-top:-10px;  
 }
 `;
 
