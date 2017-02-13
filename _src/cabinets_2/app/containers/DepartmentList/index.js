@@ -45,7 +45,6 @@ DepartmentList.propTypes = {
 
 // TODO this could definitely be refactored
 const mapStateToProps = (state) => {
-  console.log('mapping state to props', state, state.get('departments').get('departmentsArr'));
   return {
     departmentsArr: state.get('departments').get('departmentsArr'),
     departmentListVisible: state.get('departments').get('departmentListVisible'),

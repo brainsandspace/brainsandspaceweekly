@@ -6,6 +6,7 @@
 
 import React, { PropTypes } from 'react';
 import styled from 'styled-components';
+import stringHash from 'string-hash';
 
 import StarDropdown from 'components/StarDropdown';
 
@@ -100,7 +101,7 @@ class CenterColumn extends React.Component {
 
         <ul className="feature-list">
           {this.props.data.feature_bullets.map((bullet) => (
-            <li><span>{bullet}</span></li>
+            <li key={stringHash(bullet)}><span>{bullet}</span></li>
           ))}
         </ul>
 

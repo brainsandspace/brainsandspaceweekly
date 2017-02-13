@@ -6,6 +6,7 @@
 
 import React from 'react';
 import styled from 'styled-components';
+import stringHash from 'string-hash';
 
 const Wrapper = styled.div`
 margin: 0 18px;
@@ -48,12 +49,14 @@ function ProductDetails({ deets }) {
     <Wrapper>
       <h2>Product Information</h2>
       <table className="info-table">
-        {deets.headings.map((heading, ind) => (
-          <tr>
-            <td className="heading">{heading}</td>
-            <td className="spec">{deets.data[ind]}</td>
-          </tr>
-        ))}
+        <tbody>
+          {deets.headings.map((heading, ind) => (
+            <tr key={stringHash(heading)}>
+              <td className="heading">{heading}</td>
+              <td className="spec">{deets.data[ind]}</td>
+            </tr>
+          ))}
+        </tbody>
       </table>
     </Wrapper>
   );

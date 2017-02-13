@@ -7,6 +7,7 @@
 import React, { PropTypes } from 'react';
 import styled from 'styled-components';
 
+import ImageGallery from 'containers/ImageGallery';
 import CenterColumn from 'components/CenterColumn';
 
 const Wrapper = styled.div`
@@ -19,7 +20,7 @@ class HeroSection extends React.Component { // eslint-disable-line react/prefer-
   render() {
     return (
       <Wrapper>
-        <img src={this.props.data.landing_image.src} alt={this.props.data.landing_image.alt} />
+        <ImageGallery data={this.props.data} />
         <CenterColumn {...this.props} />
       </Wrapper>
     );
