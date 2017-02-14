@@ -20,9 +20,6 @@ align-items: center;
 `;
 
 class ImageGallery extends React.Component {
-  componentWillMount() {
-    console.debug('debugging', this.props);
-  }
 
   render() {
     return (
