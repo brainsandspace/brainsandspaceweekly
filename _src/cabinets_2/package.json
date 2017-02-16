@@ -237,6 +237,7 @@
     "sanitize.css": "4.1.0",
     "string-hash": "^1.1.1",
     "styled-components": "1.1.2",
+    "three": "^0.84.0",
     "warning": "3.0.0",
     "whatwg-fetch": "2.0.1"
   },
