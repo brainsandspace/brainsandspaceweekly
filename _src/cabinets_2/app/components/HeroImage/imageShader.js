@@ -26,15 +26,15 @@ void main() {
 
   if (uReverse) {
     gl_FragColor = outputColor;
-    if (vUV.x > uCursor.x - uWindowSize.x/20000.0 && vUV.x < uCursor.x + uWindowSize.x/20000.0) {
-      if (vUV.y > uCursor.y - uWindowSize.y/20000.0 && vUV.y < uCursor.y + uWindowSize.y/20000.0) {
+    if (vUV.x > uCursor.x - uWindowSize.x/15000.0 && vUV.x < uCursor.x + uWindowSize.x/15000.0) {
+      if (vUV.y > uCursor.y - uWindowSize.y/15000.0 && vUV.y < uCursor.y + uWindowSize.y/15000.0) {
         discard;
       }
     }
   }
   else {
-    if (vUV.x > uCursor.x - uWindowSize.x/20000.0 && vUV.x < uCursor.x + uWindowSize.x/20000.0) {
-      if (vUV.y > uCursor.y - uWindowSize.y/20000.0 && vUV.y < uCursor.y + uWindowSize.y/20000.0) {
+    if (vUV.x > uCursor.x - uWindowSize.x/15000.0 && vUV.x < uCursor.x + uWindowSize.x/15000.0) {
+      if (vUV.y > uCursor.y - uWindowSize.y/15000.0 && vUV.y < uCursor.y + uWindowSize.y/15000.0) {
         gl_FragColor = outputColor;
       }
     }

@@ -14,8 +14,8 @@ const THREE = require('three');
 const Wrapper = styled.div`
 canvas, img {
   width: 35vw; height: 35vw;
-  max-width: 395px;
-  max-height: 395px;
+  max-width: 395px; max-height: 395px;
+  min-width: 295px; min-height: 295px;
   background: rgba(0,0,0,0);
   user-select: none;
   cursor: pointer;
