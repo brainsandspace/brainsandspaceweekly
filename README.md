@@ -1,3 +1,5 @@
+![warning](https://render.bitstrips.com/v2/cpanel/9573395-261090531_1-s4-v1.png?transparent=1&palette=1)
+
 # brains and space weekly
 "weakly" publication
   - publishing as fast as we can, but the goal has always been 1 week from whiteboard to interwebs
