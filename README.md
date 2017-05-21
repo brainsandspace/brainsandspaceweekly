@@ -1,4 +1,4 @@
-![warning](https://render.bitstrips.com/v2/cpanel/9573395-261090531_1-s4-v1.png?transparent=1&palette=1)
+![warning](https://render.bitstrips.com/v2/cpanel/10099542-261090531_1-s4-v1.png?transparent=1&palette=1)
 
 # brains and space weekly
 "weakly" publication
